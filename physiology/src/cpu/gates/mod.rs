@@ -32,33 +32,35 @@ pub mod or {
 
 pub mod nand {
     use super::not;
+    use super::and;
 
     pub fn two(a: u8, b: u8) -> u8 {
-        not(a) & not(b)
+        not(and::two(a, b))
     }
 
     pub fn four(a: u8, b: u8, c: u8, d: u8) -> u8 {
-        not(a) & not(b) & not(c) & not(d)
+        not(and::four(a, b, c, d))
     }
 
     pub fn eight(a: u8, b: u8, c: u8, d: u8, e: u8, f: u8, g: u8, h: u8) -> u8 {
-        not(a) & not(b) & not(c) & not(d) & not(e) & not(f) & not(g) & not(h)
+        not(and::eight(a, b, c, d, e, f, g, h))
     }
 }
 
 pub mod nor {
     use super::not;
+    use super::or;
 
     pub fn two(a: u8, b: u8) -> u8 {
-        not(a) | not(b)
+        not(or::two(a, b))
     }
 
     pub fn four(a: u8, b: u8, c: u8, d: u8) -> u8 {
-        not(a) | not(b) | not(c) | not(d)
+        not(or::four(a, b, c, d))
     }
 
     pub fn eight(a: u8, b: u8, c: u8, d: u8, e: u8, f: u8, g: u8, h: u8) -> u8 {
-        not(a) | not(b) | not(c) | not(d) | not(e) | not(f) | not(g) | not(h)
+        not(or::eight(a, b, c, d, e, f, g, h))
     }
 }
 
