@@ -1,6 +1,6 @@
 pub mod gates {
     pub fn not(a: u8) -> u8 {
-        !a
+        if a == 0 { 1 } else { 0 }
     }
 
     pub mod and {
@@ -72,6 +72,10 @@ pub mod gates {
     }
 
     pub fn xnor(a: u8, b: u8) -> u8 {
-        not(xor(a, b))
+        let not_a = not(a);
+        let not_b = not(b);
+        let and1 = and::two(a, b);
+        let and2 = and::two(not_a, not_b);
+        or::two(and1, and2)
     }
 }
