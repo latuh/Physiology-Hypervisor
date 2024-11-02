@@ -1,5 +1,5 @@
 pub mod cache;
-pub mod registry;
+pub mod registers;
 pub mod cpu;
 pub mod gates;
 mod instructions;

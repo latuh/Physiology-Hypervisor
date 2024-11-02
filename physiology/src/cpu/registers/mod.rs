@@ -1,4 +1,15 @@
-pub struct Registry {
+pub enum Register {
+    Reg1,
+    Reg2,
+    Reg3,
+    Reg4,
+    Reg5,
+    Reg6,
+    Reg7,
+    Reg8
+}
+
+pub struct Registers {
     pub reg1: [u8; 1],
     pub reg2: [u8; 1],
     pub reg3: [u8; 1],
@@ -9,9 +20,9 @@ pub struct Registry {
     pub reg8: [u8; 1]
 }
 
-impl Registry {
+impl Registers {
     pub fn new() -> Self {
-        Registry {
+        Registers {
             reg1: [0; 1],
             reg2: [0; 1],
             reg3: [0; 1],

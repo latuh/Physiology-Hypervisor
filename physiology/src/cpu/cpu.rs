@@ -1,16 +1,16 @@
 use super::cache::Cache;
-use super::registry::Registry;
+use super::registers::Registers;
 
 pub struct CPU {
     pub cache: Cache,
-    pub registry: Registry
+    pub registry: Registers
 }
 
 impl CPU {
     pub fn new() -> Self {
         CPU {
             cache: Cache::new(),
-            registry: Registry::new()
+            registry: Registers::new()
         }
     }
 }
