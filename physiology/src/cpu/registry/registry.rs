@@ -11,7 +11,7 @@ pub struct Registry {
 
 impl Registry {
     pub fn new() -> Self {
-        Registry{
+        Registry {
             reg1: [0; 1],
             reg2: [0; 1],
             reg3: [0; 1],
