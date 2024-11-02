@@ -1,5 +1,5 @@
-use super::cache::cache::Cache;
-use super::registry::registry::Registry;
+use super::cache::Cache;
+use super::registry::Registry;
 
 pub struct CPU {
     pub cache: Cache,
